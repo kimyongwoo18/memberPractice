@@ -9,7 +9,8 @@
         values(#{memberEmail},#{memberPassword},#{memberName},#{memberAge},#{memberMobile})
     </insert>
 
-<!--    <select id="findBook" resultType="bookDTO">-->
-<!--        select * from book_table1 where bookId=2-->
-<!--    </select>-->
+    <select id="login" parameterType="memberDTO" resultType="memberDTO">
+        select * from member_table1 where memberEmail=#{memberEmail}
+                                      and memberPassword=#{memberPassword}
+    </select>
 </mapper>
