@@ -4,9 +4,10 @@
 
 
 <mapper namespace="member">
-<!--    <insert id="save" parameterType="bookDTO">-->
-<!--        insert into book_table1(bookName, bookAuthor, bookPrice, bookPublisher) values(#{bookName},#{bookAuthor},#{bookPrice},#{bookPublisher})-->
-<!--    </insert>-->
+    <insert id="save" parameterType="memberDTO">
+        insert into member_table1(memberEmail, memberPassword, memberName, memberAge, memberMobile)
+        values(#{memberEmail},#{memberPassword},#{memberName},#{memberAge},#{memberMobile})
+    </insert>
 
 <!--    <select id="findBook" resultType="bookDTO">-->
 <!--        select * from book_table1 where bookId=2-->
