@@ -46,10 +46,10 @@
           ${member.memberMobile}
       </td>
       <td>
-          <button class="btn btn-success" onclick="details('${member.id}')">details</button>
+          <button class="btn btn-success" onclick="details('${member.id}')">Details</button>
       </td>
       <td>
-        <button class="btn btn-danger" onclick="deleteFn('${member.id}')">details</button>
+        <button class="btn btn-danger" onclick="deleteFn('${member.id}')">Delete</button>
       </td>
     </tr>
   </c:forEach>
