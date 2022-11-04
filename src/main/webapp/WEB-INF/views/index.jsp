@@ -31,7 +31,7 @@
         location.href="/login"
     }
     const membersFn = () => {
-        location.href="/findAll"
+        location.href="/members"
     }
 </script>
 </html>

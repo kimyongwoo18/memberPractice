@@ -18,10 +18,21 @@
         select * from member_table1 where memberEmail=#{memberEmail}
     </select>
 
+    <select id="findById" parameterType="Long" resultType="memberDTO">
+        select * from member_table1 where id = #{id}
+    </select>
+
+    <select id="findAll" parameterType="memberDTO" resultType="memberDTO">
+        select * from member_table1;
+    </select>
+
     <update id="update" parameterType="memberDTO" >
         update member_table1
         set memberPassword = #{memberPassword} ,memberName = #{memberName}, memberMobile = #{memberMobile}
         where id = #{id}
     </update>
+
+
+
 
 </mapper>
