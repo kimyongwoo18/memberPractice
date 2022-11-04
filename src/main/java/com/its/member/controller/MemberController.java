@@ -50,10 +50,15 @@ public class MemberController {
         //String으로 강제형변환을 시켜준다.
         String memberEmail = (String) session.getAttribute("loginEmail");
         // memberEmail로 DB에서 해당 회원의 전체 정보 조회
-        MemberDTO member = memberService.updateInfo(memberEmail);
-        model.addAttribute("member", member);
-
-
+        MemberDTO memberDTO = memberService.findByEmail(memberEmail);
+        model.addAttribute("member", memberDTO);
         return "memberUpdate";
+    }
+    @PostMapping("/update")
+    public String update(@ModelAttribute MemberDTO memberDTO){
+        memberService.update(memberDTO);
+
+
+        return "index";
     }
 }

@@ -21,4 +21,12 @@ public class MemberService {
             return false;
         }
     }
+
+    public MemberDTO findByEmail(String memberEmail) {
+        return memberRepository.findByEmail(memberEmail);
+    }
+
+    public void update(MemberDTO memberDTO) {
+        memberRepository.update(memberDTO);
+    }
 }
